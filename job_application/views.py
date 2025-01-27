@@ -238,8 +238,8 @@ def statistics_view(request):
     response_rate = round((response_count / total_applications) * 100, 2) if total_applications > 0 else 0
     
 
-        all_applications = all_applications.filter(
-            date_applied__gte=start_date)
+    all_applications = all_applications.filter(
+        date_applied__gte=start_date)
 
     total_applications = all_applications.count()
 
